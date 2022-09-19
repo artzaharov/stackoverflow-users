@@ -77,9 +77,6 @@ def get_data(page):
 				if any(x in location for x in LOCATIONS):
 					tags = get_user_tags(account_id)
 					if all(x in tags for x in TAGS):
-						user_name = response['items'][0]['display_name']
-						profile_link = response['items'][0]['link']
-						profile_image = response['items'][0]['profile_image']
 						tags = ', '.join(tags)
 						print(f'User name: {user_name}, Location: {location}, Answer count: {answer_count}, Question count: {question_count}, Tags: {tags}, Profile: {profile_link}, Avatar: {profile_image}')
 						print('Searching...')
